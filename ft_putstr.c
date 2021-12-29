@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpoquita <kpoquita@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/28 17:00:45 by kpoquita          #+#    #+#             */
-/*   Updated: 2021/12/28 17:04:35 by kpoquita         ###   ########.fr       */
+/*   Created: 2021/12/29 17:00:58 by kpoquita          #+#    #+#             */
+/*   Updated: 2021/12/29 17:07:04 by kpoquita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdlib.h>
-# include <stdarg.h>
-# include <unistd.h>
-
-int     ft_printf(const char *format, ...);
-int     ft_putchar(char c);
-int     ft_putstr(char *str);
-
-#endif
+int	ft_putstr(char *str)
+{
+	int i;
+	
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	return (0);
+}

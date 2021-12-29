@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpoquita <kpoquita@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/28 17:00:45 by kpoquita          #+#    #+#             */
-/*   Updated: 2021/12/28 17:04:35 by kpoquita         ###   ########.fr       */
+/*   Created: 2021/12/29 13:26:41 by kpoquita          #+#    #+#             */
+/*   Updated: 2021/12/29 13:28:26 by kpoquita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+//#include "libft.h"
+#include "ft_printf.h"
 
-# include <stdlib.h>
-# include <stdarg.h>
-# include <unistd.h>
-
-int     ft_printf(const char *format, ...);
-int     ft_putchar(char c);
-int     ft_putstr(char *str);
-
-#endif
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
