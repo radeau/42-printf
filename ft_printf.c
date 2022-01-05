@@ -11,27 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
-//#include "libft.h"
-//parse means to break something down into its parts
-
-int	ft_parse(va_list params, const char flag)
-{
-	//flags to convert cspdiuxX%
-	//if flag == 'c' print putchar
-	//if flag == 's' print string
-	//if flag == 'p' print pointers in hex
-	//if flag == 'd' print decimals in base(10)
-	//if flag == 'i' print integers in base(10)
-	int printf;
-
-	printf = 0;
-	if (flag == 'c')
-		printf += ft_putchar(va_arg(params, int));
-	else if (flag == 's')
-		printf += ft_putstr(va_arg(params, char *));
-	return (printf);
-}
+// #include <stdio.h>
 
 int	ft_printf(const char *format, ...)
 {
@@ -59,16 +39,19 @@ int	ft_printf(const char *format, ...)
 	return (print);
 }
 
+// int main()
+// {
+// 	//char a = 'I';
+// 	int a = 30;
+// 	char *str;
 
-int main()
-{
-	char a = 'I';
-	char *str;
-
-	str = "Are you ready?";
-	ft_printf("%s\n", str);
-	ft_printf("%c\n", a);
-	ft_printf("am ready\n");
-	
-	return (0);
-}
+// 	str = "Are you ready?";
+// //	ft_printf("%s\n", str);
+// //	ft_printf("%c\n", a);
+// //	ft_printf("am ready\n");
+// 	ft_printf("%p\n", &str);
+// 	printf("%p\n", &str);
+// 	printf("%x\n", a);
+// 	printf("%X\n", a);
+// 	return (0);
+// }
