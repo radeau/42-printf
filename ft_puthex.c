@@ -25,49 +25,42 @@ static int	ft_nbsize(unsigned long ptr)
 	return (i);
 }
 
-int	ft_printhex(void *ptr, const char *str, int i)
+void	ft_printhex(unsigned long int num, const char flag)
 {
-	char	c;
-
-	//c = ' ';
-	if (!ptr)
+	if (num >= 16)
 	{
-		write(1, "0", 1);
-		return (1);
+		ft_printhex(num / 16, flag);
+		ft_printhex(num % 16, flag);
 	}
-	while (i > 0)
+	else
 	{
-		c = str[i - 1];
-		ft_putchar(c);
-		i--;
+		if (num <= 9)
+			ft_putchar(num + '0');
+		else
+		{
+			if (flag == 'x' || flag == 'p')
+				ft_putchar(num - 10 + 'a');
+			if (flag == 'X')
+				ft_putchar(num - 10 + 'A');
+		}
 	}
-	return (0);
 }
 
-int	ft_puthex(void *ptr)
+int		ft_puthex(unsigned int num, const char flag)
 {
-	char                *str;
-	unsigned long		num;
-	unsigned long		mod;
-	int                 i;
+	int len;
 
-	str = (char *)malloc(ft_nbsize((unsigned long)ptr) * sizeof(char));
-	if (!str)
-		return (0);
-	i = 0;
-	num = (unsigned long)ptr;
-    while (num != 0)
-    {
-        mod = num % 16;
-        if (mod < 10)
-            str[i] = mod + 48;
-        else
-            str[i] = mod + 87;
-        num /= 16;
-        i++;
-    }
-    write(1, &"0x", 2);
-    i += ft_printhex(ptr, str, i);
-    free(str);
-    return (i + 2);
+	len = 0;
+	if (num == 0)
+		return (write(1, "0", 1));
+	if (flag == 'p')
+	{
+		write(1, "0x", 2);
+		ft_printhex(num, flag);
+		len = ft_nbsize(num);
+		return (len + 2);
+	}
+	else
+		ft_printhex(num, flag);
+	return (ft_nbsize(num));
 }

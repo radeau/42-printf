@@ -12,6 +12,7 @@
 
 #include "ft_printf.h"
 // #include <stdio.h>
+// #include <limits.h>
 
 int	ft_printf(const char *format, ...)
 {
@@ -51,7 +52,11 @@ int	ft_printf(const char *format, ...)
 // //	ft_printf("am ready\n");
 // 	ft_printf("%p\n", &str);
 // 	printf("%p\n", &str);
-// 	printf("%x\n", a);
-// 	printf("%X\n", a);
+// 	ft_printf("ft_printf ==> %x\n", a);
+// 	printf("printf ==>    %x\n", a);
+// 	ft_printf("ft long max %x\n", LONG_MAX);
+// 	printf("long max %lx\n", LONG_MAX);
+// 	ft_printf("ft long min %x\n", LONG_MIN);
+// 	printf("long min %lx\n", LONG_MIN);
 // 	return (0);
 // }
