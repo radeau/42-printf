@@ -10,16 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//flags to convert cspdiuxX%
+
+//if flag == 'c' print putchar
+//if flag == 's' print putstr
+//if flag == 'p' print pointers in hex
+//if flag == 'd' print decimals in base(10)
+//if flag == 'i' print integers in base(10)
+
 #include "ft_printf.h"
 
 int	ft_parse(va_list params, const char flag)
 {
-	//flags to convert cspdiuxX%
-	//if flag == 'c' print putchar
-	//if flag == 's' print putstr
-	//if flag == 'p' print pointers in hex
-	//if flag == 'd' print decimals in base(10)
-	//if flag == 'i' print integers in base(10)
 	int printf;
 
 	printf = 0;
@@ -28,8 +30,6 @@ int	ft_parse(va_list params, const char flag)
 	else if (flag == 's')
 		printf += ft_putstr(va_arg(params, char *));
 	else if (flag == 'p')
-	{
 		printf += ft_puthex(va_arg(params, void *));
-	}
 	return (printf);
 }
