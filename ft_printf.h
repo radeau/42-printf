@@ -23,5 +23,6 @@ int     ft_putchar(char c);
 int     ft_putstr(char *str);
 //int     ft_puthex(void *ptr);
 int		ft_puthex(unsigned long num, const char flag);
+int    ft_putnbr(int n);
 
 #endif

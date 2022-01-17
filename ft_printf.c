@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-// #include <stdio.h>
-// #include <limits.h>
+#include <stdio.h>
+#include <limits.h>
 
 int	ft_printf(const char *format, ...)
 {
@@ -40,23 +40,73 @@ int	ft_printf(const char *format, ...)
 	return (print);
 }
 
-// int main()
-// {
-// 	//char a = 'I';
-// 	int a = 30;
-// 	char *str;
+int main()
+{
+	//char a = 'I';
+	// int a = 30;
+	// char *str;
 
-// 	str = "Are you ready?";
-// //	ft_printf("%s\n", str);
-// //	ft_printf("%c\n", a);
-// //	ft_printf("am ready\n");
-// 	ft_printf("%p\n", &str);
-// 	printf("%p\n", &str);
-// 	// ft_printf("ft_printf ==> %x\n", a);
-// 	// printf("printf ==>    %x\n", a);
-// 	ft_printf("ft long max %p\n", LONG_MAX);
-// 	printf("long max %p\n", LONG_MAX);
-// 	ft_printf("ft long min %p\n", LONG_MIN);
-// 	printf("long min %p\n", LONG_MIN);
-// 	return (0);
-// }
+	// str = "Are you ready?";
+	// ft_printf("%s\n", str);
+	// ft_printf("%c\n", a);
+	// ft_printf("am ready\n");
+	// ft_printf("%p\n", &str);
+	// printf("%p\n", &str);
+	// ft_printf("ft_printf ==> %x\n", a);
+	// printf("printf ==>    %x\n", a);
+	// ft_printf("ft long max %p\n", LONG_MAX);
+	// printf("long max %p\n", LONG_MAX);
+	// ft_printf("ft long min %p\n", LONG_MIN);
+	// printf("long min %p\n", LONG_MIN);
+
+	// ft_printf("%d",-1);
+    // printf(" = printf %d\n", -1);
+    // ft_printf("%d",1);
+    // printf(" = printf %d\n", 1);
+    // ft_printf("%d",9);
+    // printf(" = printf %d\n", 9);
+    ft_printf("%d",10);
+    printf(" = printf %d\n", 10);
+    ft_printf("%d",11);
+    printf(" = printf %d\n", 11);
+    ft_printf("%d",15);
+    printf(" = printf %d\n", 15);
+    ft_printf("%d",16);
+    printf(" = printf %d\n", 16);
+    ft_printf("%d",17);
+    printf(" = printf %d\n", 17);
+    ft_printf("%d",99);
+    printf(" = printf %d\n", 99);
+    ft_printf("%d",100);
+    printf(" = printf %d\n", 100);
+    ft_printf("%d",101);
+    printf(" = printf %d\n", 101);
+    ft_printf("%d",-9);
+    printf(" = printf %d\n", -9);
+    ft_printf("%d",-10);
+    printf(" = printf %d\n", -10);
+    ft_printf("%d",-11);
+    printf(" = printf %d\n", -11);
+    ft_printf("%d",-14);
+    printf(" = printf %d\n", -14);
+    ft_printf("%d",-15);
+    printf(" = printf %d\n", -15);
+    ft_printf("%d",-16);
+    printf(" = printf %d\n", -16);
+    ft_printf("%d",-99);
+    printf(" = printf %d\n", -99);
+    ft_printf("%d",-100);
+    printf(" = printf %d\n", -100);
+    ft_printf("%d",-101);
+    printf(" = printf %d\n", -101);
+    ft_printf("%d",INT_MAX);
+    printf(" = printf %d\n", INT_MAX);
+    ft_printf("%d",INT_MIN);
+    printf(" = printf %d\n", INT_MIN);
+    ft_printf("%d",LONG_MIN);
+    printf(" = printf %ld\n", LONG_MIN);
+    ft_printf("%d",LONG_MAX);
+    printf(" = printf %ld\n", LONG_MAX);
+
+	return (0);
+}
