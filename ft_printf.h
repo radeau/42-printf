@@ -22,6 +22,6 @@ int	    ft_parse(va_list params, const char flag);
 int     ft_putchar(char c);
 int     ft_putstr(char *str);
 //int     ft_puthex(void *ptr);
-int		ft_puthex(unsigned int num, const char flag);
+int		ft_puthex(unsigned long num, const char flag);
 
 #endif

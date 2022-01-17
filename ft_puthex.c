@@ -25,7 +25,7 @@ static int	ft_nbsize(unsigned long ptr)
 	return (i);
 }
 
-void	ft_printhex(unsigned long int num, const char flag)
+void	ft_printhex(unsigned long num, const char flag)
 {
 	if (num >= 16)
 	{
@@ -46,7 +46,7 @@ void	ft_printhex(unsigned long int num, const char flag)
 	}
 }
 
-int		ft_puthex(unsigned int num, const char flag)
+int		ft_puthex(unsigned long num, const char flag)
 {
 	int len;
 

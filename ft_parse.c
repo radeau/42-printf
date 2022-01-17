@@ -30,6 +30,6 @@ int	ft_parse(va_list params, const char flag)
 	else if (flag == 's')
 		printf += ft_putstr(va_arg(params, char *));
 	else if (flag == 'p' || flag == 'x' || flag == 'X')
-		printf += ft_puthex(va_arg(params, unsigned int), flag);
+		printf += ft_puthex(va_arg(params, unsigned long), flag);
 	return (printf);
 }
