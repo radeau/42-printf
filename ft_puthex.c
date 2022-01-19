@@ -64,3 +64,7 @@ int		ft_puthex(unsigned long num, const char flag)
 		ft_printhex(num, flag);
 	return (ft_nbsize(num));
 }
+
+//**********************NOTES**********************//
+//need separate function for "p" flag
+//**********************NOTES**********************//

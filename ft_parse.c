@@ -31,7 +31,12 @@ int	ft_parse(va_list params, const char flag)
 		printf += ft_putstr(va_arg(params, char *));
 	else if (flag == 'p' || flag == 'x' || flag == 'X')
 		printf += ft_puthex(va_arg(params, unsigned long), flag);
-	else if (flag == 'd')
+	else if (flag == 'd' || flag == 'i')
 		printf += ft_putnbr(va_arg(params, int));
+	else if (flag == 'u')
+		printf += ft_putnbr_u(va_arg(params, unsigned int));
+	else if (flag == '%')
+		printf += ft_putchar('%');
+	
 	return (printf);
 }
