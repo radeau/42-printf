@@ -54,10 +54,13 @@ int main()
 	// printf("%p\n", &str);
 	// ft_printf("ft_printf ==> %x\n", a);
 	// printf("printf ==>    %x\n", a);
-	// ft_printf("ft long max %p\n", LONG_MAX);
-	// printf("long max %p\n", LONG_MAX);
-	// ft_printf("ft long min %p\n", LONG_MIN);
-	// printf("long min %p\n", LONG_MIN);
+    printf("%ld\n", LONG_MAX);
+    int ft = ft_printf("ft long max %x\n", LONG_MAX);
+	int p = printf("long max %x\n", LONG_MAX);
+	// ft_printf("ft long min %x\n", LONG_MIN);
+	// printf("long min %x\n", LONG_MIN);
+
+    printf("ft = %d | p = %d\n", ft, p);
 
 	// ft_printf("%d",-1);
     // printf(" = printf %d\n", -1);
@@ -107,15 +110,15 @@ int main()
     // printf(" = printf %ld\n", LONG_MIN);
     // ft_printf("%d",LONG_MAX);
     // printf(" = printf %ld\n", LONG_MAX);
-    int f, p = 0;
-    f = ft_printf("%d", -10);
-    printf("\tft_print\n");
-    printf("%d", f);
-    printf("\treturn value\n");
-    p = printf("%d", -10);
-    printf("\tprint_standard\n");
-    printf("%d", p);
-    printf("\treturn value\n");
+    // int f, p = 0;
+    // f = ft_printf("%d", -10);
+    // printf("\tft_print\n");
+    // printf("%d", f);
+    // printf("\treturn value\n");
+    // p = printf("%d", -10);
+    // printf("\tprint_standard\n");
+    // printf("%d", p);
+    // printf("\treturn value\n");
 
 	return (0);
 }

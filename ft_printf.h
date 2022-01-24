@@ -21,7 +21,8 @@ int     ft_printf(const char *format, ...);
 int	    ft_parse(va_list params, const char flag);
 int     ft_putchar(char c);
 int     ft_putstr(char *str);
-int		ft_puthex(unsigned long num, const char flag);
+int		ft_puthex_p(unsigned long num);
+int		ft_puthex(unsigned int num, const char flag);
 int     ft_putnbr(int nbr);
 int     ft_putnbr_u(unsigned int n);
 

@@ -12,20 +12,20 @@
 
 #include "ft_printf.h"
 
-static int	ft_nbsize(unsigned long ptr)
+static int	ft_nbsize(unsigned int nbr)
 {
 	int	i;
 
 	i = 0;
-	while (ptr > 0)
+	while (nbr != 0)
 	{
-		ptr /= 16;
 		i++;
+		nbr /= 16;
 	}
 	return (i);
 }
 
-void	ft_printhex(unsigned long num, const char flag)
+static void	ft_printhex(unsigned int num, const char flag)
 {
 	if (num >= 16)
 	{
@@ -38,7 +38,7 @@ void	ft_printhex(unsigned long num, const char flag)
 			ft_putchar(num + '0');
 		else
 		{
-			if (flag == 'x' || flag == 'p')
+			if (flag == 'x')
 				ft_putchar(num - 10 + 'a');
 			if (flag == 'X')
 				ft_putchar(num - 10 + 'A');
@@ -46,20 +46,10 @@ void	ft_printhex(unsigned long num, const char flag)
 	}
 }
 
-int		ft_puthex(unsigned long num, const char flag)
+int		ft_puthex(unsigned int num, const char flag)
 {
-	int len;
-
-	len = 0;
 	if (num == 0)
 		return (write(1, "0", 1));
-	if (flag == 'p')
-	{
-		write(1, "0x", 2);
-		ft_printhex(num, flag);
-		len = ft_nbsize(num);
-		return (len + 2);
-	}
 	else
 		ft_printhex(num, flag);
 	return (ft_nbsize(num));
