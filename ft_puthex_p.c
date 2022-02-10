@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_puthex_p.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kpoquita <kpoquita@42abudhabi.ae>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/10 22:57:39 by kpoquita          #+#    #+#             */
+/*   Updated: 2022/02/10 22:57:45 by kpoquita         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static int	ft_nbsize(unsigned long nbr)
@@ -29,16 +41,16 @@ static void	ft_printhex(unsigned long num)
 	}
 }
 
-int		ft_puthex_p(unsigned long num)
+int	ft_puthex_p(unsigned long num)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (num == 0)
 		return (write(1, "0", 1));
 	else
-        write(1, "0x", 2);
-        ft_printhex(num);
-        len = ft_nbsize(num);
-    return (len + 2);
+		write(1, "0x", 2);
+	ft_printhex(num);
+	len = ft_nbsize(num);
+	return (len + 2);
 }

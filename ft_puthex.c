@@ -6,7 +6,7 @@
 /*   By: kpoquita <kpoquita@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 11:29:17 by kpoquita          #+#    #+#             */
-/*   Updated: 2022/01/03 11:29:20 by kpoquita         ###   ########.fr       */
+/*   Updated: 2022/02/10 22:47:45 by kpoquita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static void	ft_printhex(unsigned int num, const char flag)
 	}
 }
 
-int		ft_puthex(unsigned int num, const char flag)
+int	ft_puthex(unsigned int num, const char flag)
 {
 	if (num == 0)
 		return (write(1, "0", 1));
@@ -54,7 +54,3 @@ int		ft_puthex(unsigned int num, const char flag)
 		ft_printhex(num, flag);
 	return (ft_nbsize(num));
 }
-
-//**********************NOTES**********************//
-//need separate function for "p" flag
-//**********************NOTES**********************//

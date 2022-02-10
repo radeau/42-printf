@@ -6,23 +6,15 @@
 /*   By: kpoquita <kpoquita@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 21:30:45 by kpoquita          #+#    #+#             */
-/*   Updated: 2022/01/04 21:30:52 by kpoquita         ###   ########.fr       */
+/*   Updated: 2022/02/10 22:26:50 by kpoquita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//flags to convert cspdiuxX%
-
-//if flag == 'c' print putchar
-//if flag == 's' print putstr
-//if flag == 'p' print pointers in hex
-//if flag == 'd' print decimals in base(10)
-//if flag == 'i' print integers in base(10)
 
 #include "ft_printf.h"
 
 int	ft_parse(va_list params, const char flag)
 {
-	int printf;
+	int	printf;
 
 	printf = 0;
 	if (flag == 'c')
@@ -39,6 +31,5 @@ int	ft_parse(va_list params, const char flag)
 		printf += ft_putnbr_u(va_arg(params, unsigned int));
 	else if (flag == '%')
 		printf += ft_putchar('%');
-	
 	return (printf);
 }

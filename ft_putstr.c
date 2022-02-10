@@ -6,7 +6,7 @@
 /*   By: kpoquita <kpoquita@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 17:00:58 by kpoquita          #+#    #+#             */
-/*   Updated: 2021/12/29 17:07:04 by kpoquita         ###   ########.fr       */
+/*   Updated: 2022/02/10 23:21:11 by kpoquita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_putstr(char *str)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	if (str == NULL)
 	{
