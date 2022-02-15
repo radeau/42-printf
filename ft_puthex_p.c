@@ -47,7 +47,7 @@ int	ft_puthex_p(unsigned long num)
 
 	len = 0;
 	if (num == 0)
-		return (write(1, "0", 1));
+		return (write(1, "(nil)", 5));
 	else
 		write(1, "0x", 2);
 	ft_printhex(num);
