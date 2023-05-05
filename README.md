@@ -1,6 +1,3 @@
-
-Sure! Here's an updated README file without the modifiers:
-
 # ft_printf()
 
 The `ft_printf()` function is a C function that is used to print formatted output to the console or to a file. This project aims to recode the `printf()` function from the C standard library while learning to use variable numbers of arguments, also known as variadic functions.
